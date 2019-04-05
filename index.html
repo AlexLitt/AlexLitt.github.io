@@ -19,12 +19,30 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">О нас</a>
-      <a class="nav-item nav-link" href="#">Галерея</a>
-      <a class="nav-item nav-link" href="#">Контакт</a>
+      <a class="nav-item nav-link active" href="#onas">О нас</a>
+      <a class="nav-item nav-link" href="#galery">Галерея</a>
+      <a class="nav-item nav-link" href="#contact">Контакт</a>
     </div>
   </div>
 </nav>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "position": "top"
+})});
+
+</script>
 </header>
 
 <main role="main">
@@ -42,7 +60,7 @@
         <div class="carousel-caption text-left">
           <h1>Высококачественные торфяные питательные грунты для посева и выращивания овощных культур</h1>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Узнать больше</a></p>
+          <p><a class="btn btn-lg btn-primary" href="#torf" role="button">Узнать больше</a></p>
         </div>
       </div>
     </div>
@@ -52,7 +70,7 @@
         <div class="carousel-caption">
           <h1>Технический углерод по ASTM</h1>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Узнать больше</a></p>
+          <p><a class="btn btn-lg btn-primary" href="#astm" role="button">Узнать больше</a></p>
         </div>
       </div>
     </div>
@@ -62,7 +80,7 @@
         <div class="carousel-caption text-right">
           <h1>Кремниевый концентрат</h1>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Узнать больше</a></p>
+          <p><a class="btn btn-lg btn-primary" href="#krem" role="button">Узнать больше</a></p>
         </div>
       </div>
     </div>
@@ -81,10 +99,10 @@
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
-<h3 class="main__headline card__headline"> Преимущества работы с нами</h3>
+<h3 class="main__headline card__headline" id="onas"> Преимущества работы с нами</h3>
 <div class="card__container">
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="img/005-profits.png" class="card-img-top" alt="..." width="50" height="150">
   <div class="card-body">
     <h5 class="card-title">Современное оборудование</h5>
     <p class="card-text">Позволяет с максимальной эффективностью добывать и обрабатывать торф.</p>
@@ -92,7 +110,7 @@
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="img/008-gears.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Автоматизация</h5>
     <p class="card-text">Все циклы производства полностью автоматизированы</p>
@@ -100,7 +118,7 @@
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="img/011-computer.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Соблюдение технологий</h5>
     <p class="card-text">Высококачественные торфяные продукты получаются благодаря использованию правильных технологий.</p>
@@ -108,7 +126,7 @@
 </div>
 
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="img/006-objective.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Индивидуальная работа</h5>
     <p class="card-text">это основной принцип нашего предприятия. Мы не приемлем «шаблоны» в нашей работе с заказчиком. Готовы реализовать поставку согласно Вашей рецептуре и необходимой потребностью.</p>
@@ -122,22 +140,22 @@
 
 <div class="container marketing">
 
-  <h1 class="main__headline">Галерея товаров</h1>
+  <h1 class="main__headline" id="galery">Галерея товаров</h1>
   <hr class="featurette-divider">
-  <div class="row featurette">
+  <div class="row featurette" id="astm">
     <div class="col-md-7">
       <h2 class="featurette-heading">Технический углерод:</span></h2>
       <p class="lead">В основе классификации по стандарту ASTM D1765 лежит способность некоторых марок техуглерода изменять скорость вулканизации резиновых смесей. В зависимости от этого маркам присвоены буквенные индексы «N» (с нормальной скоростью вулканизации) и «S» (с замедленной скоростью вулканизации, от англ. «slow» — медленный). Следующий за буквенным цифровой индекс — номер группы марок по средней удельной поверхности.</p>
     </div>
     <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      <img src="img/uglerod.jpg" class="img-fluid" alt="Responsive image">
     </div>
   </div>
 
   <hr class="featurette-divider">
 
-  <div class="row featurette">
-    <div class="col-md-7 order-md-2">
+  <div class="row featurette" id="torf">
+    <div class="col-md-7 order-md-2" >
       <h2 class="featurette-heading">ТОРФ:</h2>
       <p class="lead">&bull; Специальные смеси для выращивания томатов, огурцов, перцев, капусты, салата</p>
       <p class="lead">&bull; Топливный торф для Жилищно – коммунальных хозяйств, использующий фрезерных или кусковой топливный торф для отопления бытовых помещений</p>
@@ -149,9 +167,59 @@
     </div>
   </div>
 
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Фракция</th>
+      <th scope="col"></th>
+      <th scope="col">Кислотность</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>0-5</td>
+      <td>0-40</td>
+      <td>рН 5,5 - 6,5</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>0-7</td>
+      <td>7-15</td>
+      <td>рН 2,3 - 3,5</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>0-10</td>
+      <td>15-30</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>0-15</td>
+      <td>7-30</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>0-20</td>
+      <td>10-20</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>0-30</td>
+      <td>10-40</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
   <hr class="featurette-divider">
 
-  <div class="row featurette">
+  <div class="row featurette" id="krem">
     <div class="col-md-7">
       <h2 class="featurette-heading">Кремниевый концентрат ТУ 38.32-001-47665149-2017:</h2>
       <p class="lead">&bull; Настоящие технические условия распространяются на материалы, образующиеся при рафинировании чернового кремния, оседающие на стенках ковша при разливке металла и извлекаемые во время чистки ковша.</p>
@@ -167,19 +235,12 @@
   <hr class="featurette-divider">
   <div class="row">
     <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      <h2 class="info__name">Имя и фамилия</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad provident aperiam reprehenderit illo expedita, laborum nisi iure nemo, magni.</p>
+      <h2 class="info__name">Генеральный директор <br>Абляев Юрий Иванович</h2>
+      <p>+ 375 44 450 89 73 Беларусь <br> + 7 987 601 0273 Российская федерация <br> + 370 647 82940 Литва <br> e-mail: fenixwelt2000@gmail.com </p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      <h2 class="info__name">Имя и фамилия</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam alias quasi quis maiores commodi nam dolores, error nostrum animi quae?</p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      <h2 class="info__name">Имя и фамилия</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam facere quidem laborum aspernatur fugiat excepturi, nostrum officia rerum distinctio nobis.</p>
+      <h2 class="info__name">Руководитель отдела развития: <br> Абляев Матвей Юрьевич</h2>
+      <p>+48 730 517 971 Польша <br> e-mail: </p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
 
@@ -206,7 +267,7 @@
 </div>
 
 
-  <h1 class="contact__main">Контакты</h1>
+  <h1 class="contact__main" id="contact">Контакты</h1>
   <div class="contact__container">
     <div class="contact__address contact">
       <h3 class="contact__headline">Данные фирмы</h3>
@@ -244,6 +305,7 @@
   </footer>
 </div>
 </main>
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
