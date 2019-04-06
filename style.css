@@ -38,6 +38,10 @@ body {
   padding-bottom: 3%;
 }
 
+ h1 {
+    font-size: 3.0rem;
+}
+
 .contact__container {
   display: -webkit-flex;
   display: -ms-flex;
