@@ -1,277 +1,348 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Renturta</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav" id="navbar">
-      <a class="nav-item nav-link active" href="#onas">О нас</a>
-      <a class="nav-item nav-link" href="#galery">Галерея</a>
-      <a class="nav-item nav-link" href="#contact">Контакт</a>
-      <a class="nav-item nav-link language-link" href="eng.html">🇬🇧</a>
-    </div>
-  </div>
-</nav>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Alex.dev</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
 
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "position": "top"
-})});
+<body>
 
-</script>
-</header>
+	<!--================ Start Header Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h logo__text" href="index.html">Alex.dev</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-end">
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+							<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Area =================-->
 
-<main role="main">
+	<!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="banner_content">
+							<h3 class="text-uppercase">Hell0</h3>
+							<h1 class="text-uppercase">I am Alex Lytvynovskyi</h1>
+							<h5 class="text-uppercase">Frontend developer</h5>
+							<div class="d-flex align-items-center">
+								<a class="primary_btn" href="#contact"><span>Contact me</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="home_right_img">
+							<img class="" src="img/home-right.png" alt="home-right">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/mountain.jpg" class="img-fluid" alt="Responsive image">
-      <div class="container">
-        <div class="carousel-caption text-left">
-          <h1 class="carousel__headline">Высококачественные торфяные питательные грунты для посева и выращивания овощных культур</h1>
-          <p><a class="btn btn-lg btn-primary" href="#torf" role="button">Узнать больше</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+	<!--================ Start About Us Area =================-->
+	<section class="about_area section_gap" id="about">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-5">
+					<div class="about_img">
+						<img class="" src="img/about-us.png" alt="">
+					</div>
+				</div>
 
-
-<h3 class="main__headline card__headline" id="onas"> Преимущества работы с нами</h3>
-<div class="card__container">
-<div class="card" style="width: 18rem;">
-  <img src="img/005-profits.png" class="card-img-top" alt="..." width="50" height="150">
-  <div class="card-body">
-    <h5 class="card-title">Современное оборудование</h5>
-    <p class="card-text">Позволяет с максимальной эффективностью добывать и обрабатывать торф.</p>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="img/008-gears.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Автоматизация</h5>
-    <p class="card-text">Все циклы производства полностью автоматизированы</p>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="img/011-computer.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Соблюдение технологий</h5>
-    <p class="card-text">Высококачественные торфяные продукты получаются благодаря использованию правильных технологий.</p>
-  </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="img/006-objective.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Индивидуальная работа</h5>
-    <p class="card-text">это основной принцип нашего предприятия. Мы не приемлем «шаблоны» в нашей работе с заказчиком. Готовы реализовать поставку согласно Вашей рецептуре и необходимой потребностью.</p>
-  </div>
-</div>
-</div>
-
-<div class=" container__motto">
-  <h2 class="motto__text"><i>"Экологическое растениеводство Европы, как залог здоровой нации"</i></h2>
-</div>
-
-<div class="container marketing">
-
-  <h1 class="main__headline" id="galery">Ассортимент продукции</h1>
-  <hr class="featurette-divider">
-  <div class="row featurette" id="astm">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Технический углерод:</span></h2>
-      <p class="lead">В основе классификации по стандарту ASTM D1765 лежит способность некоторых марок техуглерода изменять скорость вулканизации резиновых смесей. В зависимости от этого маркам присвоены буквенные индексы «N» (с нормальной скоростью вулканизации) и «S» (с замедленной скоростью вулканизации, от англ. «slow» — медленный). Следующий за буквенным цифровой индекс — номер группы марок по средней удельной поверхности.</p>
-    </div>
-    <div class="col-md-5">
-      <img src="img/uglerod.jpg" class="img-fluid" alt="Responsive image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette" id="torf">
-    <div class="col-md-7 order-md-2" >
-      <h2 class="featurette-heading">ТОРФ:</h2>
-      <p class="lead">&bull; Специальные смеси для выращивания томатов, огурцов, перцев, капусты, салата</p>
-      <p class="lead">&bull; Топливный торф для Жилищно – коммунальных хозяйств, использующий фрезерных или кусковой топливный торф для отопления бытовых помещений</p>
-      <p class="lead">&bull; Ряд субстратов для выращивания однолетних, многолетних, ампельных и луковичных цветочных культур</p>
-      <p class="lead">&bull; Субстраты для газона, посадки хвойников, кустарников, а также других декоративных культур, в том числе по индивидуальным заказам</p>
-    </div>
-    <div class="col-md-5 order-md-1">
-      <img src="img/peat.jpg" class="img-fluid" alt="Responsive image">
-    </div>
-  </div>
+				<div class="offset-lg-1 col-lg-5">
+					<div class="main_title text-left">
+						<h2>let’s <br>
+							Introduce about <br>
+							myself</h2>
+						<p>
+							Whose given. Were gathered. There first subdue greater. Bearing you Whales heaven
+							midst their. Beast creepeth. Fish days.
+						</p>
+						<p>
+							Is give may shall likeness made yielding spirit a itself together created after sea
+							is in beast beginning signs open god you're gathering whose gathered cattle let.
+							Creature whales fruit unto meat the life beginning all in under give two.
+						</p>
+						<a class="primary_btn" href="#contact"><span>Contact me</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End About Us Area =================-->
 
 
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Фракция</th>
-      <th scope="col"></th>
-      <th scope="col">Кислотность</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>0-5</td>
-      <td>0-40</td>
-      <td>рН 5,5 - 6,5</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>0-7</td>
-      <td>7-15</td>
-      <td>рН 2,3 - 3,5</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>0-10</td>
-      <td>15-30</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>0-15</td>
-      <td>7-30</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>0-20</td>
-      <td>10-20</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>0-30</td>
-      <td>10-40</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+	<!--================ Start Features Area =================-->
+	<section class="features_area" id="services">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>service offers </h2>
+						<p>
+							Is give may shall likeness made yielding spirit a itself togeth created
+							after sea <br> is in beast beginning signs open god you're gathering ithe
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row feature_inner">
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s1.png" alt="">
+						<h4>Wp developing</h4>
+						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s2.png" alt="">
+						<h4>UI/ux design</h4>
+						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s3.png" alt="">
+						<h4>Web design</h4>
+						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s4.png" alt="">
+						<h4>seo optimize</h4>
+						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
 
-  <hr class="featurette-divider">
+	<!--================Start Portfolio Area =================-->
+	<section class="portfolio_area" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>
+							Recently done projects </h2>
+					</div>
+				</div>
+			</div>
 
-  <div class="row featurette" id="krem">
-    <div class="col-md-7">
-      <h2 class="featurette-heading">Кремниевый концентрат ТУ 38.32-001-47665149-2017:</h2>
-      <p class="lead">&bull; Настоящие технические условия распространяются на материалы, образующиеся при рафинировании чернового кремния, оседающие на стенках ковша при разливке металла и извлекаемые во время чистки ковша.</p>
-      <p class="lead">&bull; Транспортирование кремниевого концентрата производится в мягких контейнерах (типа «биг-бэг») или навалом в полувагонах, в соответствии с правилами перевозки грузов, действующими на данном виде транспорта.</p>
-      <p class="lead">&bull; Хранение кремниевого концентрата должно осуществляться в условиях, исключающих попадание влаги. Кремниевый концентрат хранят навалом на специально отведенных площадках или в таре.</p>
-    </div>
-    <div class="col-md-5">
-      <img src="img/concetrate.jpg" class="img-fluid" alt="Responsive image">
-    </div>
-  </div>
+			<div class="filters-content">
+				<div class="row portfolio-grid justify-content-center">
+					<div class="col-lg-4 col-md-6 all latest">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/p1.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/p1.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">minimal design</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all popular">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/p2.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/p2.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Paint wall</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all latest">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/p3.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/p3.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">female light</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all upcoming following portfolio__block">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/p7.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/p7.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">green heaven</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all following portfolio__block">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/p8.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/p8.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4>fly male</h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all upcoming portfolio__block">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/p9.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/p9.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">season face</a></h4>
+								<p>Animated, portfolio</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Portfolio Area =================-->
 
-  <h1 class="main__headline">Менеджмент</h1>
-  <hr class="featurette-divider">
-  <div class="row">
-    <div class="col-lg-4">
-      <h2 class="info__name">Директор <br>Абляев Юрий</h2>
-      <p>+ 375 44 450 89 73 Беларусь <br> + 7 987 601 0273 Российская федерация <br> + 370 647 82940 Литва <br> e-mail: fenixwelt2000@gmail.com </p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <h2 class="info__name">Руководитель отдела развития <br> Абляев Матвей</h2>
-      <p>+48 730 517 971 Польша <br> e-mail: </p>
-    </div><!-- /.col-lg-4 -->
-  </div><!-- /.row -->
 
-</div><!-- /.container -->
+	<!--================ Start Newsletter Area =================-->
+	<section class="newsletter_area">
+		<div class="container" id="contact">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-12">
+					<div class="subscription_box text-center">
+						<h2 class="text-uppercase text-white">get update from anywhere</h2>
+						<p class="text-white">
+							Bearing Void gathering light light his eavening unto dont afraid.
+						</p>
+						<div class="subcribe-form" id="mc_embed_signup">
+							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">
+								<input name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required="" type="email">
+								<div style="position: absolute; left: -5000px;">
+									<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+								</div>
+								<button class="primary-btn hover d-inline">Get Started</button>
+								<div class="info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Newsletter Area =================-->
 
-<div class="map-form">
-  <section id="contact" class="map">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2292.675858215655!2d23.970381015452826!3d54.926159962907484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e718f86d24d419%3A0x10297c707c888f72!2zUGFydGl6YW7FsyBnLiA2MSwgS2F1bmFzIDQ5MjgyLCDQm9C40YLQstCw!5e0!3m2!1sru!2spl!4v1555177864740!5m2!1sru!2spl" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-    <br />
-    <small>
-    </small>
-  </section>
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer_top flex-column">
+						<div class="footer_logo">
+							<p class="logo__text">Alex.dev</p>
+							<h4>Follow Me</h4>
+						</div>
+						<div class="footer_social">
+							<a href="https://www.facebook.com/alex.litvinovskiy"><i class="fa fa-facebook"></i></a>
+							<a href="https://vk.com/alex_tarman"><i class="fa fa-vk"></i></a>
+							<a href="https://www.linkedin.com/in/oleksii-lytvynovskyi-8504a2100/"><i class="fa fa-linkedin"></i></a>
+							<a href="https://github.com/AlexLitt"><i class="fa fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom justify-content-center">
+				<p class="col-lg-8 col-sm-12 footer-text">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Alex.dev</p>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="js/script.js"></script>
+</body>
 
-    <div class="form__container"  id="contact">
-      <h1 class="form__headline">Cвяжитесь с нами</h2>
-      <form action="https://formspree.io/@gmail.com" method="POST" />
-        <input name="name" type="text" class="feedback-input" placeholder="Имя и фамилия" />
-        <input name="email" type="text" class="feedback-input" placeholder="E-mail" />
-        <textarea name="name" class="feedback-input" placeholder="Сообщение"></textarea>
-        <button type="button" class="btn btn-outline-primary btn-lg button">Оставить заявку</button>
-      </form>
-    </div>
-</div>
-
-
-  <h1 class="contact__main" id="contact">Контакты</h1>
-  <div class="contact__container">
-    <div class="contact__address contact">
-      <h3 class="contact__headline">Данные фирмы</h3>
-      <p class="сontact__text text">Kauno m. sav. Kauno m.</p>
-      <p class="сontact__text text">Partizanu g.61-806</p>
-      <p class="сontact__text text">Kodas 304883497</p>
-      <p class="сontact__text text">NTR objecto kodas 1997-8020-4019:0161</p>
-    </div>
-
-    <div class="contact__phone contact">
-      <h3 class="contact__headline">Телефоны.</h3>
-      <p class="сontact__text text">+370-647-82940</p>
-      <p class="сontact__text text">+375-44-4508973</p>
-      <p class="сontact__text text">+7-987-6010273</p>
-      <p class="сontact__text text">+48-730-517-971</p>
-
-    </div>
-
-    <div class="contact__code contact">
-      <h3 class="contact__headline">Коды.</h3>
-      <p class="сontact__text text">LT087180600034467315</p>
-      <p class="сontact__text text">VAT LT100012276819</p>
-      <p class="сontact__text text">EORI LT304883497</p>
-    </div>
-
-    <div class="contact__bank contact">
-      <h3 class="contact__headline">Реквизиты.</h3>
-      <p class="сontact__text text">Gintaro g.46, LT-00133</p>
-      <p class="сontact__text text">Р/ счет: LT087180600034467315</p>
-      <p class="сontact__text text">Swift: СBSBLT26</p>
-    </div>
-  </div>
-
-<!-- FOOTER -->
-<div class="container2">
-  <footer class="footer">
-    <p class="float-right"><a class="link" href="#navbar">Back to top</a></p>
-    <p class="copy">&copy; 2019 Matchup inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</div>
-</main>
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
 </html>
