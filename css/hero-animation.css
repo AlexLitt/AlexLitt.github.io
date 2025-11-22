@@ -1,0 +1,5 @@
+#hero-title-1, #hero-title-2 {
+    display: block;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+

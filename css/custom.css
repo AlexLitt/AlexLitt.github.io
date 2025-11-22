@@ -1,0 +1,503 @@
+/* Brutalist Design System Overrides */
+
+:root {
+    --font-primary: 'Anton', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-bg: #f8f9fa;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-black);
+    font-family: var(--font-mono);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mono-text {
+    font-family: var(--font-mono);
+}
+
+/* Header & Nav */
+.navigation {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+/* Header Contact Arrow Animation */
+.nav-link i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* Hero Section */
+.hero-area {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background: transparent;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 13vw;
+    line-height: 0.85;
+    margin-bottom: 20px;
+    letter-spacing: -5px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.available-badge {
+    border: 1px solid #000;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+}
+
+.brutalist-link {
+    font-family: var(--font-mono);
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.brutalist-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.brutalist-link:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+.brutalist-link:hover i {
+    transform: rotate(45deg);
+}
+
+/* Animations - Reveal */
+.reveal-text {
+    overflow: hidden;
+    display: block;
+}
+
+.reveal-text span {
+    display: block;
+    transform: translateY(100%);
+    /* Updated easing to cubic-bezier(0.16, 1, 0.3, 1) */
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-text.is-visible span {
+    transform: translateY(0);
+}
+
+/* Animations - Grid Draw */
+@keyframes drawWidth {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes drawHeight {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+/* Apply Grid Draw to borders using pseudo elements */
+/* Removing default borders to replace with animated ones */
+.section.border-top.border-dark, 
+.section.border-bottom.border-dark {
+    border-color: transparent !important;
+    position: relative;
+}
+
+/* Top Border Draw */
+.section.border-top.border-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    width: 0;
+    animation: drawWidth 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* Slight delay on load */
+}
+
+/* Bottom Border Draw */
+.section.border-bottom.border-dark::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    width: 0;
+    animation: drawWidth 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Sections */
+.section-title {
+    margin-bottom: 0;
+    display: block;
+}
+
+.section-header-row {
+    border-bottom: 1px solid #000; /* We might want to animate this one too if it's a major line */
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    position: relative;
+    border-bottom-color: transparent !important; /* Hide default */
+}
+
+.section-header-row::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    width: 0;
+    animation: drawWidth 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Services Grid */
+.services-grid {
+    border-bottom: 1px solid #000;
+    position: relative;
+    border-bottom-color: transparent !important;
+}
+
+.services-grid::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    width: 0;
+    transition: width 0.8s ease-out;
+}
+
+.services-grid.animate-border::after {
+    width: 100%;
+}
+
+.service-col {
+    border-right: 1px solid #000;
+    padding: 2rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-col:last-child {
+    border-right: none;
+}
+
+.service-col:hover {
+    background-color: #000;
+    color: #fff !important;
+}
+
+.service-col:hover * {
+    color: #fff !important;
+}
+
+.service-col:hover .service-image {
+    filter: grayscale(0%) invert(1);
+}
+
+.service-number {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.service-title {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.service-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    margin-top: 1rem;
+    transition: filter 0.3s ease;
+}
+
+/* Project Cards - Overlay Style */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 2;
+}
+
+.project-card h3,
+.project-card p,
+.project-card .mono-text,
+.project-card a {
+    color: #fff !important;
+}
+
+.tech-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 2px 8px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Contact Form */
+.contact-headline {
+    font-size: 5vw;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 4rem;
+}
+
+.brutalist-form-group {
+    margin-bottom: 2rem;
+}
+
+.brutalist-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: #000;
+    border-radius: 0;
+}
+
+.brutalist-input:focus {
+    outline: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+}
+
+.brutalist-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.budget-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.budget-btn {
+    background: transparent;
+    border: 1px solid #ccc;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 8px 16px;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.budget-btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.submit-btn {
+    background: transparent;
+    border: 1px solid #000;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #000;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.submit-btn i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.submit-btn:hover i {
+    transform: rotate(45deg);
+}
+
+.contact-info-block {
+    text-align: right;
+}
+
+.contact-email {
+    font-size: 2rem;
+    font-family: var(--font-primary);
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-social-link {
+    font-family: var(--font-mono);
+    color: #000;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contact-social-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.contact-social-link:hover i {
+    transform: rotate(45deg);
+}
+
+
+/* Footer */
+.footer-name {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Utility */
+.border-dark {
+    border-color: #000 !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Reset specific Kross template styles */
+.card {
+    border: 1px solid #000;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #000;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 991px) {
+    .service-col {
+        border-right: none;
+        border-bottom: 1px solid #000;
+        min-height: auto;
+    }
+    
+    .hero-title {
+        font-size: 18vw;
+    }
+    
+    .contact-headline {
+        font-size: 8vw;
+    }
+}

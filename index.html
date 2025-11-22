@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Alit - Portfolio</title>
-
+  <title>Portfolio</title>
+  
   <!-- Mobile Specific Metas
   ================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,8 +15,13 @@
   <meta name="author" content="Alit">
   <meta name="generator" content="Alit">
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22black%22/></svg>" />
   
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -27,14 +32,23 @@
 
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/services.css" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <link href="css/hero-animation.css" rel="stylesheet">
 
 </head>
 <body>
   
 
-<header class="navigation fixed-top">
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.svg" alt="Myself"></a>
+<header class="navigation fixed-top bg-white border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-light py-3">
+    <a class="navbar-brand font-weight-bold text-uppercase" href="index.html">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" fill="black"/>
+            <circle cx="20" cy="20" r="10" fill="white"/>
+        </svg>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
       aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -42,14 +56,14 @@
 
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
+        <li class="nav-item">
+          <a class="nav-link mono-text text-dark" href="index.html">[ HOME ]</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>        
+          <a class="nav-link mono-text text-dark" href="#section-portfolio">[ WORKS ]</a>
+        </li>
         <li class="nav-item">
-          <a class="nav-link" href="#section-portfolio">Portfolio</a>
+            <a class="nav-link mono-text text-dark" href="#contact">CONTACT ME <i>↗</i></a>
         </li>
       </ul>
     </div>
@@ -57,378 +71,574 @@
 </header>
 
 <!-- hero area -->
-<section class="hero-area bg-primary" id="parallax">
-  <div class="container">
+<section class="hero-area" id="hero">
+  <div class="container-fluid px-4 px-md-5">
     <div class="row">
-      <div class="col-lg-11 mx-auto">
-        <h1 class="text-white font-tertiary">Hi! <br> I’m  Alex</h1>
-        <h1 class="animate-typing"      
-        data-type-speed="100"
-        data-type-delay="100"
-        data-remove-speed="100"
-        data-remove-delay="100"
-        data-cursor-speed="100000">
-          UX/UI Designer |
-          Business Analyst |
-          Product Manager
+      <div class="col-12">
+        <div class="hero-top d-flex justify-content-between align-items-end mb-2">
+             <!-- 1.618 removed -->
+        </div>
+        <h1 class="hero-title text-uppercase reveal-text">
+             <span id="hero-title-1">Product</span>
+        </h1>
+        <h1 class="hero-title text-uppercase reveal-text" style="margin-top: -1vw;">
+            <span id="hero-title-2">Manager</span>
         </h1>
       </div>
     </div>
+    
+    <div class="row align-items-center mt-4">
+       <div class="col-lg-4 d-none d-lg-block">
+          <div class="hero-meta">
+            <p class="mono-text mb-1">/ PRODUCT STRATEGY</p>
+            <p class="mono-text mb-1">/ AI & AUTOMATION</p>
+            <p class="mono-text mb-0">/ DATA ANALYTICS</p>
+          </div>
+       </div>
+       <div class="col-lg-4 text-center position-relative">
+          <!-- Image removed for brutalist text-only focus -->
+          <div class="hero-spacer" style="height: 100px;"></div> 
+       </div>
+       <div class="col-lg-4 text-right d-none d-lg-block">
+           <p class="mono-text spaced-text mb-0">B A S E D &nbsp; I N &nbsp; P O L A N D</p>
+       </div>
+    </div>
+
+    <div class="row mt-5 pt-5">
+        <div class="col-md-6">
+            <!-- Header Badge Removed -->
+        </div>
+        <div class="col-md-6 text-md-right">
+             <p class="hero-desc mx-auto ml-md-auto mr-md-0" style="max-width: 400px;">
+                HI, I’M ALEX. I DESIGN, BUILD, AND LAUNCH AI-POWERED PRODUCTS FOR SAAS, E-COMMERCE, AND FINTECH.
+             </p>
+             <div class="mt-2"> <!-- Reduced from mt-4 -->
+                <a href="#section-portfolio" class="brutalist-link">RECENT WORK <i class="ti-arrow-top-right"></i></a>
+             </div>
+        </div>
+    </div>
   </div>
-  <div class="layer-bg w-100">
-    <img class="img-fluid w-100" src="images/illustrations/leaf-bg.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l2">
-    <img src="images/illustrations/dots-cyan.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l3">
-    <img src="images/illustrations/leaf-orange.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l4">
-    <img src="images/illustrations/dots-orange.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l5">
-    <img src="images/illustrations/leaf-yellow.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l6">
-    <img src="images/illustrations/leaf-cyan.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l7">
-    <img src="images/illustrations/dots-group-orange.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l8">
-    <img src="images/illustrations/leaf-pink-round.png" alt="bg-shape">
-  </div>
-  <div class="layer" id="l9">
-    <img src="images/illustrations/leaf-cyan-2.png" alt="bg-shape">
-  </div>
-  <!-- social icon -->
-  <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
-    <li class="mb-3"><a class="text-white" href="https://www.linkedin.com/in/oleksii-lytvynovskyi-8504a2100/"><i class="ti-linkedin"></i></a></li>
-    <li class="mb-3"><a class="text-white" href="https://www.behance.net/alexlitvinvskiy"><i class="ti-dribbble"></i></a></li>
-  </ul>
-  <!-- /social icon -->
 </section>
 <!-- /hero area -->
 
 <!-- about -->
-<section class="section">
+<section class="section pt-0"> <!-- Reduced padding top -->
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
-        <p class="font-secondary paragraph-lg text-dark">Since beginning my journey as a freelance developer I've worked with some start-ups, agencies and small companies. I'm passionate about web technologies and web design. If you have any questions - drop me a message.</p>
+        <!-- Ghost element wrapper for Typewriter animation -->
+        <div style="position: relative; display: inline-block;">
+             <!-- The invisible 'Ghost' text that reserves space -->
+             <p class="mono-text paragraph-lg text-dark mb-0" style="visibility: hidden; opacity: 0;">With 6+ years in product roles, I specialize in building AI features, automation workflows, and data-driven solutions. My experience spans working with venture-backed startups and established SaaS companies to deliver scalable value.</p>
+             
+             <!-- The actual animated text positioned absolutely on top -->
+             <p class="mono-text paragraph-lg text-dark mb-0" id="hero-intro-text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">With 6+ years in product roles, I specialize in building AI features, automation workflows, and data-driven solutions. My experience spans working with venture-backed startups and established SaaS companies to deliver scalable value.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <!-- /about -->
 
-<!-- skills -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-title">Skills</h2>
+<!-- services -->
+<section class="section pt-5 pb-0 bg-light border-top border-bottom">
+  <div class="container-fluid px-0">
+    <div class="row no-gutters section-header-row px-4 px-md-5">
+      <div class="col-lg-12">
+        <h2 class="section-title text-uppercase" style="font-family: 'Anton', sans-serif; font-size: 5rem;">Services</h2>
       </div>
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="card shadow text-center">
-          <div class="position-relative rounded-top progress-wrapper" data-color="#fdb157">
-            <div class="wave" data-progress="90%"></div>
-          </div>
-          <div class="card-footer bg-white">
-            <h4 class="card-title">UX/UI</h4>
-          </div>
+    </div>
+    
+    <!-- Accordion Container -->
+    <div class="services-accordion services-grid">
+      
+      <!-- Service 1 -->
+      <div class="service-col active" onclick="toggleService(this)">
+        <div>
+            <span class="service-number">00-1</span>
+            <h3 class="service-title">PRODUCT<br>STRATEGY</h3>
+        </div>
+        <div class="service-content">
+            <ul class="list-unstyled mono-text service-list font-weight-bold text-uppercase">
+                <li>/ ROADMAPPING / DISCOVERY / MVP DEFINITION / MARKET ANALYSIS / GO-TO-MARKET</li>
+            </ul>
+            <p class="mono-text small mt-3">
+                I help companies define their product vision and execution strategy. Each roadmap combines market data and user needs to deliver scalable value.
+            </p>
+            <!-- Abstract pattern placeholder -->
+            <svg width="100%" height="150" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-3">
+                <rect x="0" y="0" width="400" height="150" fill="#eee"/>
+                <rect x="20" y="20" width="100" height="10" fill="black"/>
+                <rect x="20" y="40" width="80" height="10" fill="black"/>
+                <circle cx="300" cy="75" r="40" stroke="black" stroke-width="2"/>
+                <line x1="150" y1="20" x2="350" y2="130" stroke="black" stroke-width="1"/>
+            </svg>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="card shadow text-center">
-          <div class="position-relative rounded-top progress-wrapper" data-color="#9473e6">
-            <div class="wave" data-progress=" 80%"></div>
-          </div>
-          <div class="card-footer bg-white">
-            <h4 class="card-title">Market Analysis</h4>
-          </div>
+
+      <!-- Service 2 -->
+      <div class="service-col" onclick="toggleService(this)">
+        <div>
+            <span class="service-number">00-2</span>
+            <h3 class="service-title">AI &<br>AUTOMATION</h3>
+        </div>
+        <div class="service-content">
+            <ul class="list-unstyled mono-text service-list font-weight-bold text-uppercase">
+                <li>/ LLMS / WORKFLOWS / AGENTS</li>
+            </ul>
+             <p class="mono-text small mt-3">
+                Building intelligent agents and automated workflows that reduce operational costs by automating manual tasks and enhancing business capabilities.
+            </p>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="card shadow text-center">
-          <div class="position-relative rounded-top progress-wrapper" data-color="#bdecf6">
-            <div class="wave" data-progress="80%"></div>
-          </div>
-          <div class="card-footer bg-white">
-            <h4 class="card-title">BA and BI</h4>
-          </div>
+
+      <!-- Service 3 -->
+      <div class="service-col" onclick="toggleService(this)">
+        <div>
+            <span class="service-number">00-3</span>
+            <h3 class="service-title">DATA<br>ANALYTICS</h3>
+        </div>
+        <div class="service-content">
+             <ul class="list-unstyled mono-text service-list font-weight-bold text-uppercase">
+                <li>/ MIXPANEL / GRAFANA / GA4</li>
+            </ul>
+            <p class="mono-text small mt-3">
+                Turning raw data into actionable product insights through custom dashboards and tracking implementation.
+            </p>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="card shadow text-center">
-          <div class="position-relative rounded-top progress-wrapper" data-color="#ffbcaa">
-            <div class="wave" data-progress="70%"></div>
-          </div>
-          <div class="card-footer bg-white">
-            <h4 class="card-title">Web App</h4>
-          </div>
+
+      <!-- Service 4 -->
+      <div class="service-col" onclick="toggleService(this)">
+        <div>
+             <span class="service-number">00-4</span>
+             <h3 class="service-title">UX<br>RESEARCH</h3>
+        </div>
+        <div class="service-content">
+            <ul class="list-unstyled mono-text service-list font-weight-bold text-uppercase">
+                <li>/ DISCOVERY / USER TESTING / PROTOTYPING</li>
+            </ul>
+             <p class="mono-text small mt-3">
+                Validating hypotheses early with real users to minimize risk and maximize product-market fit.
+            </p>
         </div>
       </div>
+
+      <!-- Service 5 -->
+      <div class="service-col" onclick="toggleService(this)">
+        <div>
+            <span class="service-number">00-5</span>
+            <h3 class="service-title">SAAS &<br>PLATFORMS</h3>
+        </div>
+        <div class="service-content">
+            <ul class="list-unstyled mono-text service-list font-weight-bold text-uppercase">
+                <li>/ SHOPIFY / VIDEO SAAS / FINTECH</li>
+            </ul>
+             <p class="mono-text small mt-3">
+                End-to-end platform development expertise from e-commerce to complex fintech solutions.
+            </p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<!-- /skills -->
+<!-- /services -->
+
+<!-- education removed -->
+
+<!-- portfolio -->
+<section class="section bg-white border-dark" id="section-portfolio">
+  <div class="container">
+    <div class="row mb-3"> <!-- Reduced from mb-4 to mb-3 -->
+      <div class="col-12">
+        <h2 class="section-title text-uppercase mb-0" style="font-family: 'Anton', sans-serif; font-size: 4rem;">Selected Projects</h2>
+      </div>
+    </div>
+    <div class="row shuffle-wrapper compact-grid">
+      
+      <!-- Project 1: Document Review Flow -->
+      <div class="col-lg-6 col-md-6 col-12 shuffle-item" onclick="location.href='#!';" style="cursor: pointer;">
+        <div class="compact-project-card">
+          <div class="flip-card-inner">
+            <!-- Front Side -->
+            <div class="flip-card-front">
+                <div class="project-img-container">
+                    <!-- Flowchart placeholder -->
+                    <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect width="400" height="300" fill="#f0f0f0"/>
+                       <rect x="50" y="50" width="80" height="40" stroke="black" stroke-width="2"/>
+                       <rect x="160" y="120" width="80" height="40" stroke="black" stroke-width="2"/>
+                       <rect x="270" y="190" width="80" height="40" stroke="black" stroke-width="2"/>
+                       <line x1="90" y1="90" x2="90" y2="110" stroke="black" stroke-width="2"/>
+                       <line x1="90" y1="110" x2="200" y2="110" stroke="black" stroke-width="2"/>
+                       <line x1="200" y1="110" x2="200" y2="120" stroke="black" stroke-width="2"/>
+                       <line x1="200" y1="160" x2="200" y2="180" stroke="black" stroke-width="2"/>
+                       <line x1="200" y1="180" x2="310" y2="180" stroke="black" stroke-width="2"/>
+                       <line x1="310" y1="180" x2="310" y2="190" stroke="black" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title font-weight-bold">DOCUMENT REVIEW FLOW</h3>
+                  <p class="project-meta mono-text">/ AUTOMATION / NLP / PYTHON</p>
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="flip-card-back">
+                <h4>CHALLENGE</h4>
+                <p>Manual document processing is slow, error-prone, and scales poorly, leading to significant delays and costs in legal and compliance sectors.</p>
+                
+                <h4>BENEFIT</h4>
+                <p>Implemented an AI-driven automation using NLP and Python that automatically extracts key data, flags discrepancies, and categorizes documents, reducing manual review time by 70% and establishing a higher standard of accuracy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Stock Analysis Flow -->
+      <div class="col-lg-6 col-md-6 col-12 shuffle-item" onclick="location.href='#!';" style="cursor: pointer;">
+        <div class="compact-project-card">
+          <div class="flip-card-inner">
+            <!-- Front Side -->
+            <div class="flip-card-front">
+                <div class="project-img-container">
+                     <!-- Graph placeholder -->
+                     <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect width="400" height="300" fill="#f0f0f0"/>
+                       <polyline points="50,250 100,200 150,220 200,150 250,180 300,100 350,80" fill="none" stroke="black" stroke-width="3"/>
+                       <line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-width="1"/>
+                       <line x1="50" y1="50" x2="50" y2="250" stroke="black" stroke-width="1"/>
+                       <rect x="280" y="50" width="70" height="30" fill="black"/>
+                    </svg>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title font-weight-bold">STOCK ANALYSIS FLOW</h3>
+                  <p class="project-meta mono-text">/ FINTECH / DATA / API</p>
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="flip-card-back">
+                <h4>CHALLENGE</h4>
+                <p>Investors lack real-time, consolidated insights across diverse data sources for rapid, informed stock trading decisions.</p>
+                
+                <h4>BENEFIT</h4>
+                <p>Developed a comprehensive data aggregation and analysis platform, leveraging multiple financial APIs to provide predictive analytics and sentiment scores, improving decision speed by 50% and identifying new market opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: AI Video Generation -->
+      <div class="col-lg-6 col-md-6 col-12 shuffle-item" onclick="location.href='#!';" style="cursor: pointer;">
+        <div class="compact-project-card">
+          <div class="flip-card-inner">
+            <!-- Front Side -->
+            <div class="flip-card-front">
+                <div class="project-img-container">
+                    <!-- Video UI placeholder -->
+                     <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect width="400" height="300" fill="#f0f0f0"/>
+                       <rect x="50" y="50" width="300" height="180" stroke="black" stroke-width="2"/>
+                       <polygon points="180,110 180,170 230,140" fill="black"/>
+                       <rect x="50" y="250" width="300" height="20" fill="#ccc"/>
+                       <rect x="50" y="250" width="100" height="20" fill="black"/>
+                    </svg>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title font-weight-bold">AI VIDEO GENERATION</h3>
+                  <p class="project-meta mono-text">/ GENERATIVE AI / FFmpeg / SAAS</p>
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="flip-card-back">
+                <h4>CHALLENGE</h4>
+                <p>Creating customized video content is expensive, time-consuming, and requires specialized skills, limiting scalability for marketing and personalized communication.</p>
+                
+                <h4>BENEFIT</h4>
+                <p>Engineered an AI-powered video generation tool, integrating generative models and FFmpeg, allowing users to rapidly produce tailored video assets from text or data, cutting production costs by 80% and enabling hyper-personalization at scale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: AI Image Generation -->
+      <div class="col-lg-6 col-md-6 col-12 shuffle-item" onclick="location.href='#!';" style="cursor: pointer;">
+        <div class="compact-project-card">
+          <div class="flip-card-inner">
+            <!-- Front Side -->
+            <div class="flip-card-front">
+                <div class="project-img-container">
+                     <!-- Grid placeholder -->
+                     <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect width="400" height="300" fill="#f0f0f0"/>
+                       <rect x="50" y="50" width="90" height="90" fill="black" opacity="0.1"/>
+                       <rect x="155" y="50" width="90" height="90" fill="black" opacity="0.3"/>
+                       <rect x="260" y="50" width="90" height="90" fill="black" opacity="0.5"/>
+                       <rect x="50" y="155" width="90" height="90" fill="black" opacity="0.7"/>
+                       <rect x="155" y="155" width="90" height="90" fill="black" opacity="0.9"/>
+                       <rect x="260" y="155" width="90" height="90" fill="black"/>
+                    </svg>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title font-weight-bold">AI IMAGE GENERATION</h3>
+                  <p class="project-meta mono-text">/ STABLE DIFFUSION / PYTHON / GPU</p>
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="flip-card-back">
+                <h4>CHALLENGE</h4>
+                <p>Designers and marketers face high costs and limited creative options when sourcing custom visual content, often relying on stock images or lengthy design cycles.</p>
+                
+                <h4>BENEFIT</h4>
+                <p>Built a robust AI image generation platform utilizing Stable Diffusion and Python on GPU infrastructure, empowering users to create unique, high-quality visuals on demand, accelerating content creation by 10x and enhancing brand originality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: AI AGENT DATA ANALYSIS -->
+      <div class="col-lg-6 col-md-6 col-12 shuffle-item" onclick="location.href='#!';" style="cursor: pointer;">
+        <div class="compact-project-card">
+          <div class="flip-card-inner">
+            <!-- Front Side -->
+            <div class="flip-card-front">
+                <div class="project-img-container">
+                     <!-- Data Analytics placeholder -->
+                     <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect width="400" height="300" fill="#f0f0f0"/>
+                       <rect x="50" y="50" width="300" height="200" stroke="black" stroke-width="2"/>
+                       <circle cx="200" cy="150" r="50" stroke="black" stroke-width="2"/>
+                       <line x1="200" y1="50" x2="200" y2="250" stroke="black" stroke-width="1"/>
+                       <line x1="50" y1="150" x2="350" y2="150" stroke="black" stroke-width="1"/>
+                       <circle cx="100" cy="100" r="10" fill="black"/>
+                       <circle cx="300" cy="200" r="10" fill="black"/>
+                       <circle cx="150" cy="220" r="10" fill="black"/>
+                       <circle cx="250" cy="80" r="10" fill="black"/>
+                    </svg>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title font-weight-bold">AI AGENT DATA ANALYSIS</h3>
+                  <p class="project-meta mono-text">/ PROACTIVE AI / DATA INSIGHTS / ML</p>
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="flip-card-back">
+                <h4>CHALLENGE</h4>
+                <p>Businesses struggle to proactively identify actionable insights from vast datasets and require constant manual analysis to optimize operations or identify new strategies.</p>
+                
+                <h4>BENEFIT</h4>
+                <p>Developed an autonomous AI agent that continuously monitors data streams, identifies anomalies and trends, generating actionable strategic recommendations that enable 3x faster data-driven decisions and predictive operational efficiency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: AI MATCHING ENGINE -->
+      <div class="col-lg-6 col-md-6 col-12 shuffle-item" onclick="location.href='#!';" style="cursor: pointer;">
+        <div class="compact-project-card">
+          <div class="flip-card-inner">
+            <!-- Front Side -->
+            <div class="flip-card-front">
+                <div class="project-img-container">
+                     <!-- Matching/Network placeholder -->
+                     <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <rect width="400" height="300" fill="#f0f0f0"/>
+                       <circle cx="100" cy="150" r="40" stroke="black" stroke-width="2"/>
+                       <circle cx="300" cy="150" r="40" stroke="black" stroke-width="2"/>
+                       <line x1="140" y1="150" x2="260" y2="150" stroke="black" stroke-width="2" stroke-dasharray="10 5"/>
+                       <rect x="180" y="130" width="40" height="40" fill="black"/>
+                       <path d="M180 130 L220 170" stroke="white" stroke-width="2"/>
+                       <path d="M220 130 L180 170" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title font-weight-bold">AI MATCHING ENGINE</h3>
+                  <p class="project-meta mono-text">/ NLP / RECRUITMENT TECH / SAAS</p>
+                </div>
+            </div>
+            <!-- Back Side -->
+            <div class="flip-card-back">
+                <h4>CHALLENGE</h4>
+                <p>Recruitment processes are often inefficient, relying on keyword matching or subjective human review, leading to high time-to-hire and poor candidate-company fit.</p>
+                
+                <h4>BENEFIT</h4>
+                <p>Built an advanced AI-powered matching engine utilizing NLP and machine learning to analyze candidate profiles and company requirements, intelligently matching candidates to roles 5x faster, resulting in a significant improvement in placement success rates and long-term retention.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /portfolio -->
 
 <!-- experience -->
 <section class="section">
   <div class="container">
-    <div class="row justify-content-around">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-title">Experience</h2>
+    <div class="row mb-5">
+      <div class="col-lg-12">
+        <h2 class="section-title text-uppercase" style="font-family: 'Anton', sans-serif; font-size: 4rem;">Experience</h2>
       </div>
-      <div class="col-lg-3 col-md-4 text-center">
-        <img src="images/experience/icon-1.png" alt="icon">
-        <p class="mb-0">Jan 2016 - Present</p>
-        <h4>UI/UX Designer</h4>
-        <h6 class="text-light">Freelance</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 text-center">
-        <img src="images/experience/icon-2.png" alt="icon">
-        <p class="mb-0">Jan 2017 - Present</p>
-        <h4>Web Developer</h4>
-        <h6 class="text-light">Freelance</h6>
-      </div>
-      <div class="col-lg-3 col-md-4 text-center">
-        <img src="images/experience/icon-3.png" alt="icon">
-        <p class="mb-0">Jan 2020 - Present</p>
-        <h4>Business Analyst <br> Product Owner</h4>
-        <h6 class="text-light">IT Company</h6>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Job 1 -->
+        <div class="row mb-5 pb-5 border-bottom border-dark">
+            <div class="col-lg-3 mb-3 mb-lg-0">
+                <h4 class="font-weight-bold mb-1">2022 – Present</h4>
+                <span class="mono-text">[ Remote ]</span>
+            </div>
+            <div class="col-lg-9 pl-lg-5">
+                <h3 class="mb-3 font-weight-bold text-uppercase">Senior Product Manager – Video SaaS</h3>
+                <ul class="list-unstyled mono-text">
+                    <li class="mb-2">/ Led the strategy and delivery of core AI-powered features (voiceover, captions, automation) end-to-end.</li>
+                    <li class="mb-2">/ Own roadmap, discovery, and delivery with cross-functional teams.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Job 2 -->
+        <div class="row mb-5 pb-5 border-bottom border-dark">
+            <div class="col-lg-3 mb-3 mb-lg-0">
+                <h4 class="font-weight-bold mb-1">2022 – Present</h4>
+                <span class="mono-text">[ Freelance ]</span>
+            </div>
+            <div class="col-lg-9 pl-lg-5">
+                <h3 class="mb-3 font-weight-bold text-uppercase">Product Management & AI Consultant</h3>
+                <ul class="list-unstyled mono-text">
+                    <li class="mb-2">/ Design and implement critical AI workflows for banking/fintech clients (document review, loan advisor, automation).</li>
+                    <li class="mb-2">/ Help clients shape product strategy, discovery, and MVPs.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Job 3 -->
+        <div class="row mb-5 pb-5 border-bottom border-dark">
+            <div class="col-lg-3 mb-3 mb-lg-0">
+                <h4 class="font-weight-bold mb-1">2020 – 2022</h4>
+                <span class="mono-text">[ Founder ]</span>
+            </div>
+            <div class="col-lg-9 pl-lg-5">
+                <h3 class="mb-3 font-weight-bold text-uppercase">Founder and Scale Leader – FNDIT</h3>
+                <ul class="list-unstyled mono-text">
+                    <li class="mb-2">/ Founded and scaled an AI-driven platform matching remote IT talent with global companies.</li>
+                    <li class="mb-2">/ Led product, business development, and go-to-market across 5 countries.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Job 4 -->
+        <div class="row">
+            <div class="col-lg-3 mb-3 mb-lg-0">
+                <h4 class="font-weight-bold mb-1">Earlier Career</h4>
+            </div>
+            <div class="col-lg-9 pl-lg-5">
+                <h4 class="mb-3 font-weight-bold text-uppercase">UX/UI Designer & Web Developer</h4>
+                <p class="mono-text">Various freelance and agency roles focusing on web design, development, and business analysis.</p>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <!-- ./experience -->
 
-<!-- education -->
-<section class="section position-relative">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-title">Education</h2>
-      </div>
-      <div class="col-lg-6 col-md-6 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2014-2017</p>
-            <h4>Bachelor in Management</h4>
-            <p class="mb-0 text-light">Poland</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2017</p>
-            <h4>Bachelor in International Business</h4>
-            <p class="mb-0 text-light">Germany</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2020</p>
-            <h4>UI/UX school</h4>
-            <p class="mb-0 text-light">Ukraine</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
-          </div>
-          <div>
-            <p class="text-dark mb-1">2021-2022</p>
-            <h4>Product Management School</h4>
-            <p class="mb-0 text-light">Ukraine</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- bg image -->
-  <img class="img-fluid edu-bg-image w-100" src="images/backgrounds/education-bg.png" alt="bg-image">
+<!-- Project Description (Hidden/Removed) -->
+<!-- 
+<section class="section bg-primary position-relative testimonial-bg-shapes"> 
+...
 </section>
-<!-- /education -->
-
-<!-- portfolio -->
-<section class="section" id="section-portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">Portfolio</h2>
-      </div>
-    </div>
-    <div class="row shuffle-wrapper">
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="images/portfolio/portfolio-1.png" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="https://www.behance.net/gallery/102385317/FNDIT-mobile-app-for-searching-remote-jobs">View Project</a>
-              <p class="text-white mt-2">Mobile App for FNDIT</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="images/portfolio/portfolio-2.png" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="https://www.behance.net/gallery/98458545/Website-for-architect-company">View Project</a>
-              <p class="text-white mt-2">Website for an architect company</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="images/portfolio/portfolio-3.png" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="https://www.fndit.app/">view project</a>
-              <p class="text-white mt-2">FNDIT website</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="images/portfolio/portfolio-4.png" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <p class="text-white mt-2">10+ websites for hotels in USA</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img src="images/portfolio/item-5.png" alt="portfolio-image" class="img-fluid rounded w-100">
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="#!">projects under NDA</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /portfolio -->
-
-<!-- Project Description -->
-<section class="section bg-primary position-relative testimonial-bg-shapes">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title text-white mb-5">My projects</h2>
-      </div>
-      <div class="col-lg-10 mx-auto testimonial-slider">
-        <!-- slider-item -->
-        <div class="text-center testimonial-content">
-          <h4 class="text-center text-white mb-4"><strong>Matchup</strong></h4>
-          <p class="text-white mb-4">Matchup is a platform that allows students to find their first job or internship. It requires student to compele a form with his/her preferences about their job and based on that the platform will match students with their employer.</p>
-        </div>
-        <!-- slider-item -->
-        <div class="text-center testimonial-content">
-          <h4 class="text-center text-white mb-4"><strong>FNDIT<strong></h4>
-          <p class="text-white mb-4">FNDIT is a website that helps IT specialists from Eastern and Central Europe to find a remote job in a European company. From other side it helps companies to grow without being bind to a specific region and hire the best talent from other regions.</p>
-        </div>
-        <!-- slider-item -->
-        <div class="text-center testimonial-content">
-          <h4 class="text-center text-white mb-4"><strong>Design Studio</strong></h4>
-          <p class="text-white mb-4">From time to time I work as a business consultant for a people who want to start their own business. We are going through the concept, visual design and market research, trying to understand what product will be a perfect fit for a specific niche.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- bg shapes -->
-  <img src="images/backgrounds/map.png" alt="map" class="img-fluid bg-map">
-  <img src="images/illustrations/dots-group-v.png" alt="bg-shape" class="img-fluid bg-shape-1">
-  <img src="images/illustrations/leaf-orange.png" alt="bg-shape" class="img-fluid bg-shape-2">
-  <img src="images/illustrations/dots-group-sm.png" alt="bg-shape" class="img-fluid bg-shape-3">
-  <img src="images/illustrations/leaf-pink-round.png" alt="bg-shape" class="img-fluid bg-shape-4">
-  <img src="images/illustrations/leaf-cyan.png" alt="bg-shape" class="img-fluid bg-shape-5">
-</section>
-<!-- /testimonial -->
+-->
 
 
 
 <!-- contact -->
-<section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
+<section class="section bg-light pt-5" id="contact">
   <div class="container">
-    <div class="row">
+    <div class="row mb-5">
       <div class="col-12 text-center">
-        <h2 class="section-title">Contact Info</h2>
+          <p class="mono-text text-uppercase mb-2">Let's start the conversation</p>
+          <h2 class="contact-headline text-uppercase font-weight-bold">Great Design<br>Starts With<br>Great Collaboration</h2>
       </div>
+    </div>
+    <div class="row">
       <div class="col-lg-8 mx-auto">
-        <div class="bg-white rounded text-center p-5 shadow-down">
-          <h4 class="mb-80">Contact Form</h4>
-          <form action="#" class="row">
-            <div class="col-md-6">
-              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4" required>
-            </div>
-            <div class="col-md-6">
-              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4" required>
-            </div>
-            <div class="col-12">
-              <textarea name="message" id="message" class="form-control px-0 mb-4"
-                placeholder="Type Message Here" required></textarea>
-            </div>
-            <div class="col-lg-6 col-10 mx-auto">
-              <button class="btn btn-primary w-100">send</button>
-            </div>
+          <form action="https://formspree.io/f/xyzvjgzl" method="POST" id="contact-form" class="mb-5">
+              <!-- Hidden Subject Field -->
+              <input type="hidden" name="_subject" value="New Portfolio Inquiry - Start The Audit">
+              
+              <div class="brutalist-form-group">
+                  <label for="name" class="brutalist-label">Your Name*</label>
+                  <input type="text" id="name" name="name" class="brutalist-input" required>
+              </div>
+              <div class="brutalist-form-group">
+                  <label for="email" class="brutalist-label">Your Email*</label>
+                  <input type="email" id="email" name="_replyto" class="brutalist-input" required>
+              </div>
+              <div class="brutalist-form-group">
+                  <label for="message" class="brutalist-label">How Can I Help You</label>
+                  <textarea id="message" name="message" class="brutalist-input" rows="1"></textarea>
+              </div>
+              <div class="text-center">
+                  <button type="submit" id="submit-btn" class="submit-btn">Start The Audit <i>↗</i></button>
+              </div>
+              <!-- Error Message Container -->
+              <div id="form-error-message" class="text-center mt-3 mono-text text-danger" style="display: none; color: red;">
+                  ERROR: Submission failed. Please try again or contact me on Telegram.
+              </div>
           </form>
-        </div>
+          
+          <!-- Success Message Container -->
+          <div id="form-success-message" class="mb-5 text-center" style="display: none;">
+              <h3 class="font-weight-bold text-uppercase mb-4">MESSAGE SENT. THANK YOU.</h3>
+              <p class="mono-text text-dark">I hope it's working correctly and I'm going to get your message! If you don't hear back within 24 hours, or if you prefer an immediate response, feel free to write me directly on Telegram.</p>
+              <div class="mt-4">
+                  <a href="https://t.me/Alex_litv" target="_blank" class="brutalist-link">TELEGRAM <i>↗</i></a>
+              </div>
+          </div>
       </div>
+    </div>
+    
+    <div class="row mt-5 pt-5 align-items-end">
+        <div class="col-lg-6">
+            <!-- Left empty or for other info -->
+        </div>
+        <div class="col-lg-6 contact-info-block text-lg-right">
+             <a href="mailto:alexlitvinovskiy@gmail.com" class="contact-email d-block mb-4">alexlitvinovskiy@gmail.com</a>
+             <div class="d-flex justify-content-lg-end">
+                 <a href="https://www.behance.net/alexlitvinvskiy" class="contact-social-link" target="_blank">BEHANCE <i>↗</i></a>
+                 <a href="https://t.me/Alex_litv" class="contact-social-link" target="_blank">TELEGRAM <i>↗</i></a>
+                 <a href="https://www.linkedin.com/in/oleksii-lytvynovskyi/" class="contact-social-link" target="_blank">LINKEDIN <i>↗</i></a>
+             </div>
+        </div>
     </div>
   </div>
 </section>
 <!-- /contact -->
 
 <!-- footer -->
-<footer class="bg-dark footer-section">
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5 class="text-light">Email</h5>
-          <p class="text-white paragraph-lg font-secondary">alexlitvinovskiy@gmail.com</p>
+<footer class="bg-white border-top border-dark pt-5 pb-3">
+  <div class="container">
+    <div class="row mb-5">
+        <div class="col-md-6">
+             <!-- Duplicate links removed -->
         </div>
-        <div class="col-md-4">
-          <h5 class="text-light">Phone</h5>
-          <p class="text-white paragraph-lg font-secondary">+48 576 795 177</p>
+        <div class="col-md-6 text-md-right">
+            <p class="mono-text mb-1">Address:</p>
+            <p class="mono-text text-muted">Warsaw, Poland</p>
         </div>
-        <div class="col-md-4">
-          <h5 class="text-light">Address</h5>
-          <p class="text-white paragraph-lg font-secondary">Warsaw, Poland</p>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright &copy;<script>
-        var CurrentYear = new Date().getFullYear()
-        document.write(CurrentYear)
-      </script></p>
+    <div class="row">
+        <div class="col-12">
+             <!-- Footer Name Removed -->
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <!-- Location removed -->
+        </div>
+        <div class="col-md-6 text-md-right">
+             <p class="mono-text small text-muted">© Alex Litvinovskiy. All Rights Reserved. 2025</p>
+        </div>
+    </div>
   </div>
 </footer>
 <!-- /footer -->

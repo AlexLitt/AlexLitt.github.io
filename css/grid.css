@@ -1,0 +1,162 @@
+/* Compact Grid Layout */
+.compact-grid .shuffle-item {
+    margin-bottom: 30px;
+}
+
+/* Flip Card Container */
+.compact-project-card {
+    position: relative;
+    background: #fff;
+    perspective: 1000px; /* Enable 3D perspective */
+    border: none !important; /* Remove default border from container, managed by faces */
+}
+
+/* Breathing Effect on Hover (Scale) - Removed scale as per request */
+.compact-project-card:hover {
+    z-index: 10;
+    opacity: 1; /* Ensure opacity stays 1 */
+}
+
+/* Flip Card Inner Wrapper */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: none;
+}
+
+/* Trigger Flip on Hover */
+.compact-project-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back Faces */
+.flip-card-front, .flip-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #000; /* Border on faces */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Front Face Styling - Relative to dictate height */
+.flip-card-front {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+/* Back Face Styling - Absolute to follow Front's size */
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0; /* Grey background */
+    color: #000; /* Normal text color */
+    transform: rotateY(180deg);
+    padding: 30px 20px;
+    text-align: left;
+    justify-content: center;
+    overflow-y: auto; /* In case content overflows */
+}
+
+/* Back Content Styling */
+.flip-card-back h4 {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.flip-card-back p {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.flip-card-back p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ensure images and info take up space in Front Face */
+.project-img-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+    background: #f8f9fa;
+    border-bottom: 1px solid #000;
+    flex-shrink: 0; /* Don't shrink image container */
+}
+
+.project-img-container svg, 
+.project-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+    background: #fff;
+    flex-grow: 1; /* Fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.project-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0; /* Adjust margin for centered layout */
+}
+
+/* Project link removed from design, keeping style just in case */
+.project-link {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+}
+
+/* Placeholder patterns */
+.pattern-bg {
+    width: 100%; 
+    height: 100%;
+    background-image: 
+        linear-gradient(45deg, #000 25%, transparent 25%), 
+        linear-gradient(-45deg, #000 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #000 75%), 
+        linear-gradient(-45deg, transparent 75%, #000 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    opacity: 0.1;
+}

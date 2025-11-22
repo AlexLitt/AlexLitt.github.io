@@ -1,0 +1,86 @@
+/* Services Accordion (Desktop Horizontal) */
+@media (min-width: 992px) {
+    .services-accordion {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .service-col {
+        flex: 1;
+        border-right: 1px solid #000;
+        padding: 2rem;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: -1px; /* Fix double borders */
+    }
+
+    .service-col:last-child {
+        border-right: none;
+    }
+
+    .service-col.active {
+        flex: 3; /* Takes up ~3x more space than collapsed items */
+        background-color: #fff;
+        color: #000 !important;
+    }
+    
+    .service-col.active:hover {
+        background-color: #fff;
+        color: #000 !important;
+    }
+
+    .service-col.active:hover * {
+        color: #000 !important;
+    }
+
+    /* Inactive state hover */
+    .service-col:not(.active):hover {
+        background-color: #000;
+        color: #fff !important;
+    }
+    
+    .service-col:not(.active):hover * {
+        color: #fff !important;
+    }
+
+    /* Content visibility */
+    .service-content {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+        display: none; /* Hide content when collapsed to prevent overflow issues */
+    }
+
+    .service-col.active .service-content {
+        opacity: 1;
+        transform: translateY(0);
+        display: block;
+    }
+    
+    .service-title {
+        white-space: nowrap; /* Keep title readable */
+    }
+}
+
+/* Mobile Vertical Stack (already default behavior, just refinement) */
+@media (max-width: 991px) {
+    .service-col {
+        width: 100%;
+        border-bottom: 1px solid #000;
+        border-right: none;
+        min-height: auto;
+        padding: 2rem;
+    }
+    .service-content {
+        display: block; /* Always show content on mobile for simplicity or can implement vertical accordion if requested specifically */
+        opacity: 1;
+    }
+}
+
